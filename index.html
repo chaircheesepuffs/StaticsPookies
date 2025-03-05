@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chairs Friends</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffffff, #8a2be2,#8a2be2, #ffffff );
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .friend-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+            gap: 20px; 
+            justify-items: center;
+            margin-top: 30px;
+        }
+
+        .friend-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            width: 100%;
+            max-width: 260px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .friend-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .friend-body p {
+            font-size: 1.1em;
+            color: #ffffff;
+        }
+
+        .friend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .friend-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ma Bestest Friends</h1>
+        <div class="friend-cards">
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Bxt</h2>
+                </div>
+                <div class="friend-body">
+                    <p>This man is like a brother to me, he helped whenever i needed it, and hes like raze</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Astral</h2>
+                </div>
+                <div class="friend-body">
+                    <p>Astral is a great friend bro</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Laxlep</h2>
+                </div>
+                <div class="friend-body">
+                    <p>This fella is the type of guy that has to answer the call when i call bro, this guy played basketball on vc lol</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Jjfire</h2>
+                </div>
+                <div class="friend-body">
+                    <p>This is the guy that i develop fire tag with, we have a mental bond bro 🙏</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Heeps</h2>
+                </div>
+                <div class="friend-body">
+                    <p>British pookie</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Neva</h2>
+                </div>
+                <div class="friend-body">
+                    <p>This guy is chill asf istg</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Table</h2>
+                </div>
+                <div class="friend-body">
+                    <p>This is my brother</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Mixtape</h2>
+                </div>
+                <div class="friend-body">
+                    <p>Chill friend that REALLY wants a guild for sum reason</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Raze</h2>
+                </div>
+                <div class="friend-body">
+                    <p>Yk the type of guy that you meet when u start in this community and just stick with them? thats raze bro, idk what i would do without him</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = () => {
+            const friendCards = document.querySelectorAll('.friend-card');
+            friendCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.animation = 'fadeIn 0.8s forwards'; 
+                }, index * 200); 
+            });
+        };
+    </script>
+</body>
+</html>
